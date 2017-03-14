@@ -1,0 +1,27 @@
+
+
+連線登入本機- windows驗證
+   sqlcmd -E -d adventureworks2012
+   
+連線登入本機- SQL server驗證
+   sqlcmd -Usa -Ppassw0rd  -d adventureworks2012
+
+
+
+
+---------------------------
+**確認 遠端
+   1 允許遠端連線  (右鍵 SQL server) 屬性/ 連接 確認已勾 允許此伺服器遠端連線 
+   2 防火牆 關閉 或 新增連接埠 1433 /
+       **win7 防火牆/進階設定/輸入規則/新增規則/連接埠/下一步/ TCP, 1433/允許連線/下一步/名稱:SQL/ 完成
+   3 組態工具:SQL Config manager或SQL Server 組態管理員
+      : 網路組態/MSSQLSERVER: 啟動TCP : 重啟服務  SQL Server(MSSQLSERVER)
+
+連線登入遠端- windows驗證
+   sqlcmd -S 192.168.23.5 -E  -d adventureworks2012
+ 
+連線登入遠端- SQL server驗證
+   sqlcmd -S 192.168.23.5 -Usa -Ppassw0rd  -d adventureworks2012
+
+
+

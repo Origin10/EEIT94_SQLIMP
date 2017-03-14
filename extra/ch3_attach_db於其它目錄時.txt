@@ -1,0 +1,15 @@
+ch3_attach_db於其它目錄時.txt
+
+設定 該目錄為 Everyone 可 完全控制
+
+步驟
+
+1  檔案總管 建立 D:\mydb3
+    
+2  檔案總管  右鍵 mydb3 / 內容 / 安全性 / 編輯 /新增 / 進階 
+    / 立即搜尋 / 點 Everyone /確定 /確定
+    /點 Everyone / 點 完全控制 / 確定
+
+3 檔案總管  copy 欲掛載的資料庫 (mdf ldf 檔..)
+
+4 ssms 右鍵 資料庫 /附加 /加入 / 點選 d:\mydb3 選 mdf
